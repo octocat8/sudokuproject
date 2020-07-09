@@ -1,0 +1,25 @@
+Developing a Sudoku solving program in Python
+Minimum Goals:
+-> Program should be able to run a graphical sudoku interface
+-> Program should be able to generate new puzzles randomly
+-> Program should allow user to play as far as they want
+-> Program should be able to solve the given puzzle in whatever state it is in
+or
+-> Program should state that the problem is unsolvable
+
+Timeline:
+Developing the backend code first
+Includes
+-> Setting up the basic pieces of the puzzle
+-> Figuring out how to create sudoku puzzles randomly (preferably solvable all the time)
+-> Provide an option for the user to try the game out on their own
+-> Develop an algorithm to solve the puzzle
+Once that has been tested, converting to a GUI although now that I think about it, creating the GUI first might be a
+better idea so that I can have a better understanding as to how to accept input
+(Input via CLI will be tough to manage)
+
+Goals:
+Enable the algorithm to learn from its errors and thus speed up the solving process
+Maybe allow the algorithm to start from scratch when trying to play instead of figuring out from the tricks I know.
+
+Created on July 9th, with a promise to go sit for an hour and learn or create everyday until the project ends.
