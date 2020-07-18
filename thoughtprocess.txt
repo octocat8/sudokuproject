@@ -1,0 +1,31 @@
+Beginning this project has been a challenge, but finally getting some thinking done about what it should be. 
+As I see it now, the board is proving troubling to think about simulating.
+
+its a 9x9 grid, but also could be thought of as a recursive pattern, and thus there could be two ways to address any block
+
+Schema 1: Where we consider regular list implementation of rows and cols
+
+00 01 02 03 04 05 06 07 08
+10 11 12 13 14 15 16 17 18
+20 21 22 23 24 25 26 27 28
+30 31 32 33 34 35 36 37 38
+40 41 42 43 44 45 46 47 48
+50 51 52 53 54 55 56 57 58
+60 61 62 63 64 65 66 67 68
+70 71 72 73 74 75 76 77 78
+80 81 82 83 84 85 86 87 88
+
+Here each block gets harder to distinguish and one needs to to specify certain conditions to check whether an address belongs to a block
+
+consider a block xy then the remaining coordinates of the addresses within the block are:
+
+(x%3==0?x+2:x-1)(y%3==0?y+2:y-1) (x%3==0?x+2:x-1)y (x%3==0?x+2:x-1)(y%3==2?y-2:y+1)
+        x(y%3==0?y+2:y-1)               xy                  x(y%3==2?y-2:y+1)
+(x%3==2?x-2:x+1)(y%3==0?y+2:y-1) (x%3==2?x-2:x+1)y (x%3==2?x-2:x+1)(y%3==2?y-2:y+1)
+
+for ex if 33 is the address, then the other addresses in the block are:
+55 53 54     33 34 35
+35 33 34  => 43 44 45
+45 53 44     53 54 55
+
+which is correct but this is a cumbersome procedure to 
